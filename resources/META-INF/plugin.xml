@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>win.zhuhao.rxfindview</id>
+    <name>RxFindView</name>
+    <version>1.0</version>
+    <vendor email="22003365@qq.com" url="http://www.zhuhao.win">朱浩</vendor>
+
+    <description>
+        基于RxView的findView插件
+        1.在代码中选中字符文件名,按快捷键alt+f
+        2.勾选即可生成变量名和findView方法
+        3.如果引用了RxView,会按照RxView的方式来生成点击事件.
+        4.如果没有引用RxView,会按照默认方式生成点击事件
+    </description>
+
+    <change-notes>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="RxFindView.findview" class="action.FindViewAction" text="RxFindView" description="findViewById">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt F"/>
+        </action>
+    </actions>
+
+</idea-plugin>
